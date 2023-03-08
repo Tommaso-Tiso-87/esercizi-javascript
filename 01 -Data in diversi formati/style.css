@@ -1,0 +1,27 @@
+
+*,body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    height:100%;
+    background-image: radial-gradient(#ffffff 15%, #00fff2 60%);
+    background-repeat: no-repeat;
+}
+
+    
+   
+
+
+h1{
+    text-align: center;
+    width: 100%;
+    height:50px;
+    margin-bottom: 18px;
+}
+h2{
+    width: 100%;
+    height:100px;
+    background-image: radial-gradient(#00fff2 15%, #fff 85%);
+    text-align: center;
+
+}

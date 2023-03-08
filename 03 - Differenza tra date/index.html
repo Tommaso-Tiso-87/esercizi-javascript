@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Differenza tra date</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TRACCIA
+Create due input html di tipo datepicker, ed al click di un bottone calcolate la differenza tra la data2 e la data1. Assicurarsi che la seconda data sia maggiore della prima. -->
+
+    <header>
+        <h1>Differenza tra date</h1>
+    </header>
+    <main>
+        <div>
+            <label for="data1">Inserisci la tua prima data:</label>
+            <input type="date" id="data1" name="data1" value="value"><br><br>
+            <label for="data2">Inserisci la tua seconda data:</label>
+            <input type="date" id="data2" name="data2" value="value"><br><br>
+            <button onclick="calcola()">Calcola</button>
+        </div>
+            
+          
+          <p id="riportaData">La differenza di date è: <span id="dataCalcolata"></span></p>
+
+        
+    </main>
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
