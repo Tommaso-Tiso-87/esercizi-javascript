@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag&drop</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Traccia Esercizio
+    L’obiettivo di oggi è creare una Kanban con dei task trascinabili. 
+    Per Kanban si intende una lavagna divisa in colonne che mostrano lo stato di avanzamento dei lavori. 
+    Nell’esempio di oggi avremo 4 colonne per task (compiti) da svolgere in coda, aperti, in revisione e completati.
+    
+    La parte fondamentale dell’esercizio è inserire la logica di drag and drop per trascinare
+     i task da una colonna all’altra.
+    
+    Parte opzionale: gestite non solo la parte grafica del drag and drop, ma anche i dati che 
+    effettivamente vengono spostati tra colonne. Potete gestirlo come un array di oggetti (colonne) 
+    al cui interno c’è un array di oggetti (task). Trascinando il task su un’altra colonna bisogna 
+    spostare il task anche all’interno degli array corretti.
+    
+    Parte opzionale extra (tutto compreso nella soluzione): salvate la posizione dei task in modo permanente 
+    utilizzando il localstorage del browser ed al caricamento della pagina generate 
+    i task nella loro posizione corrente. -->
+
+    <h1 class="text-center text-blue-700 text-3xl font-bold my-4">
+      KANBAN TABLE
+    </h1>
+
+    <div class="flex flex-row p-10 m-10 h-[700px] gap-10">
+      <div
+        class="colonna rounded-xl bg-slate-200 p-10 w-80 flex flex-col gap-4 justify-start"
+        data-column="0"
+      >
+        <h2 class="text-2xl text-center font-bold mb-4">In Coda</h2>
+
+        <div
+          class="task p-4 rounded-xl shadow-xl bg-white"
+          draggable="true"
+          data-task="0"
+        >
+          Rispondere alle email
+        </div>
+        <div
+          class="task p-4 rounded-xl shadow-xl bg-white"
+          draggable="true"
+          data-task="1"
+        >
+          Allenare gambe
+        </div>
+        <div
+          class="task p-4 rounded-xl shadow-xl bg-white"
+          draggable="true"
+          data-task="2"
+        >
+          Ricaricare credito telefono
+        </div>
+        <div
+          class="task p-4 rounded-xl shadow-xl bg-white"
+          draggable="true"
+          data-task="3"
+        >
+          Prenotare visita dentista
+        </div>
+      </div>
+      <div
+        class="colonna rounded-xl bg-slate-200 p-10 w-80 flex flex-col gap-4 justify-start"
+        data-column="1"
+      >
+        <h2 class="text-2xl text-center font-bold mb-4">Aperto</h2>
+      </div>
+      <div
+        class="colonna rounded-xl bg-slate-200 p-10 w-80 flex flex-col gap-4 justify-start"
+        data-column="2"
+      >
+        <h2 class="text-2xl text-center font-bold mb-4">In Revisione</h2>
+      </div>
+      <div
+        class="colonna rounded-xl bg-slate-200 p-10 w-80 flex flex-col gap-4 justify-start"
+        data-column="3"
+      >
+        <h2 class="text-2xl text-center font-bold mb-4">Completato</h2>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
